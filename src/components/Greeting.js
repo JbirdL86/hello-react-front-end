@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { getGreetings } from '../redux/greetings/greeting';
 
-const Greeting = () => {
+function Greeting() {
   const dispatch = useDispatch();
   const greeting = useSelector((state) => state.greeting);
 
@@ -21,6 +21,6 @@ const Greeting = () => {
       <span>{greeting.greeting}</span>
     </div>
   );
-};
+}
 
 export default Greeting;
