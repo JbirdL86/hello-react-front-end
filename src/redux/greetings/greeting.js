@@ -21,7 +21,7 @@ export const getGreetings = () => async (dispatch) => {
     .catch((error) => console.log(error));
 };
 
-function rootReducer(action, state = initialState) {
+function rootReducer(state = initialState, action = { type: null, payload: null }) {
   switch (action.type) {
     case GET_GREETINGS_SUCCESS:
       return action.payload[Math.floor(Math.random() * 5)];
